@@ -92,7 +92,63 @@ It is possible, and, in fact, preferred to create a seperate CSS file and then a
 
 ## Initializing the map
 
-...
+With the ```<div>``` element for the map defined and styled, we can finally move on to adding the map itself using a bit of JavaScript. First we will need to add another ```<script>``` element to our HTML file, but this time at the bottom of the ```<body>```, rather than in the ```<head>``` as before. Whereas our ```<script>``` tag in the ```<head>``` is used to load the Leaflet library, the ```<script>``` tag in the body will contain the JavaScript (modified from the Leaflet library) which defines the behaviour of the interactive map. It is best practice to place scripts which define the behavior of an HTML object at the bottom of the ```<body>``` to improve web display speed.
+
+```html
+<body>
+    <div id="map"></div>
+    <script>
+        var map = L.map("map");
+    </script>
+</body>
+```
+
+With ```var``` our script creates a variable called "map" and assigns the JavaScript object ```L.map()``` to it. ```L``` refers to a global object of the Leaflet library, which contains all of the library functions and methods. ```.map()``` refers to the Leaflet method which creates a map using two types of argument. The first argument is required, and supplies the ID of the ```<div>``` where the map is located in the HTML; in this case, ```"map"```. The second argument is optional and defines map options using name-value pairs to specify preferences for the initial appearance and interactivity of the map.  (Note that some of these options can also be defined using Leaflet methods). The following specifies that the initial load of our map should be centered on the city of Philadelphia with a zoom level of 15. 
+
+```html
+<body>
+    <div id="map"></div>
+    <script>
+        var map = L.map("map", {center: [39.9526, 75.1652], zoom: 15});
+    </script>
+</body>
+```
+
+Note that the ```center``` option is defined using geographic coordinates (latitude and longitude) represented in the array ```[lat, lon]``` (expressing a ```[Y, X]``` axis-relationship) and not as ```[lon, lat]```.  It is important to be aware of the ```[lat, lon]``` convention in order to avoid mixing up your coordinates, thus causing your map to display the wrong area.
+
+Nearly there! Now we need to set a tile layer, which will provide the background imagery for the map itself. Think about the different appearances of  maps that you might encounter in a textbook or road atlas, or the different options available in your favorite GPS app (defaults, satellite, terrain, etc.) - in web-mapping these are your tile layers. There are many, many [options for tile layers]([https://leaflet-extras.github.io/leaflet-providers/preview/index.html](https://leaflet-extras.github.io/leaflet-providers/preview/index.html) available and it is worth exploring which of these best support the needs of your mapping progject. One popular provider is OpenStreetMap. Copy-paste the JavaScript for OpenStreetMaps from the options page under a new ```<script>``` variable called ```openStreet```.
+
+```html
+<body>
+    <div id="map"></div>
+    <script>
+        
+        var map = L.map("map", {center: [39.9526, 75.1652], zoom: 15});
+        
+        var openStreet = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+    </script>
+</body>
+```
+
+What do you think the method ```.addTo()``` does?
+
+Finally, with the tile layer in place, let's add one additional element to the ```<head>``` of our document. 
+
+```html
+<head>
+    <title>Leaflet Web Map</title>
+    <meta name="viewport" content="width=device-width, 
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+```
+
+This bit of code is optional if you intend for your map to be viewed exclusively from a computer browser, but since Leaflet is a mobile-friendly library, we can use the ```<meta>``` element here to disable unwanted scaling of the page when viewed on mobile devices (which would cause many of the symbols and controls on the map to appear too small).
+
+Now, save your file and try opening it in your browser. Notice any difference?
 
 ---
 
