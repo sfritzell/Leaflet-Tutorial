@@ -6,12 +6,14 @@ An introduction to web-mapping using LeafletJS.
 
 ## About this tutorial:
 
-This tutorial provides a basic introduction to Leaflet as a tool for creating mobile-friendly interactive maps.  Upon completion, the learner will be able to use HTML, CSS, and JavaScript to set up a simple Leaflet map, define tile layers, markers, and interactive popups. 
+This tutorial provides a basic introduction to Leaflet as a tool for creating mobile-friendly interactive maps. Upon completion, the learner will be able to set up a simple Leaflet map, define tile layers, markers, and interactive popups. 
+
+Some basic familiarity with HTML syntax is assumed.
 
 ## Contents:
 
 1. [About Leaflet](topics/01-leaflet.md)
-2. Setting up the map
+2. [Setting up the map](topics/02-prep.md)
 3. Modifying the base map
 4. Adding objects
 5. Working with popups
