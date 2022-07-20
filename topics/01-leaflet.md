@@ -8,8 +8,8 @@ A web map is not just a digital map which exists and can be accessed on the web,
 
 Like the spatial information presented in GIS software, web maps are typically composed of one or more layers belonging to two general categories:
 
-1. **Background layers**: also called basemaps, these consist of collections of vector tiles, or gridded images, which are typically designed for general use, rather than specifically prepared for any one map; these layers are typically static and non-interactive
-2. **Foreground layers**: also called overlays, these typically consist of vector layers (points, lines, or ploygons) which have been specifically perpared for fine-tuned for use in a single web map; these layers are typically dynamic and tied to some form of user interaction
+1. **Background layers**: also called basemaps, these consist of collections of vector tiles, or gridded images, and are most often designed for general use, rather than specifically prepared for any one map; these layers are typically static and non-interactive
+2. **Foreground layers**: also called overlays, these typically consist of vector layers (points, lines, or ploygons) which have been specifically perpared or fine-tuned for use in a single web map; these layers are typically dynamic and tied to some form of user interaction
 
 ## Leaflet and other web-mapping tools:
 
