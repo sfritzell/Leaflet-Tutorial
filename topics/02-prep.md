@@ -60,7 +60,7 @@ In addition to its CSS and JavaScript files, the Leaflet library also consists o
 
 ## Creating and styling the map
 
-Now that we have created references to the Leaflet library, we can go ahead and create some space for the web map to exist within our basic HTML framework. We can do this by adding a ```<div>``` element within the ```<body>``` of the HTML, which creates space used to hold the interactive map. 
+Now that we have created references to the Leaflet library, we can go ahead and create some space for the web map to exist within our basic HTML framework. We do this by adding a ```<div>``` element within the ```<body>``` of the HTML, which creates the space used to hold the interactive map. 
 
 ```html
 <body>
@@ -116,7 +116,7 @@ With ```var``` our script creates a variable called "map" and assigns the JavaSc
 
 Note that the ```center``` option is defined using geographic coordinates (latitude and longitude) represented in the array ```[lat, lon]``` (expressing a ```[Y, X]``` axis-relationship) and not as ```[lon, lat]```.  It is important to be aware of the ```[lat, lon]``` convention in order to avoid mixing up your coordinates, thus causing your map to display the wrong area.
 
-Nearly there! Now we need to set a tile layer, which will provide the background imagery for the map itself. Think about the different appearances of  maps that you might encounter in a textbook or road atlas, or the different options available in your favorite GPS app (defaults, satellite, terrain, etc.) - in web-mapping these are your tile layers. There are many, many [options for tile layers]([https://leaflet-extras.github.io/leaflet-providers/preview/index.html](https://leaflet-extras.github.io/leaflet-providers/preview/index.html) available and it is worth exploring which of these best support the needs of your mapping progject. One popular provider is OpenStreetMap. Copy-paste the JavaScript for OpenStreetMaps from the options page under a new ```<script>``` variable called ```openStreet```.
+Nearly there! Now we need to set a tile layer, which will provide the background imagery for the map itself. Think about the different appearances of  maps that you might encounter in a textbook or road atlas, or the different options available in your favorite GPS app (defaults, satellite, terrain, etc.) - in web-mapping these are your tile layers. There are many, many [options for tile layers](https://leaflet-extras.github.io/leaflet-providers/preview/index.html) available and it is worth exploring which of these best support the needs of your mapping project. One popular provider is OpenStreetMap. Copy-paste the JavaScript for OpenStreetMaps from the options page under a new ```<script>``` variable called ```openStreet```.
 
 ```html
 <body>
@@ -148,7 +148,7 @@ Finally, with the tile layer in place, let's add one additional element to the `
 
 This bit of code is optional if you intend for your map to be viewed exclusively from a computer browser, but since Leaflet is a mobile-friendly library, we can use the ```<meta>``` element here to disable unwanted scaling of the page when viewed on mobile devices (which would cause many of the symbols and controls on the map to appear too small).
 
-Now, save your file and try opening it in your browser. Notice any difference?
+Now save your file and try opening it in your browser. Notice any difference?
 
 ---
 
