@@ -37,7 +37,7 @@ When loading an external script file using the ```<script>``` element we use the
 </head>
 ```
 
-Note that placing a script in the ```<head>``` does carry the risk of causing the page to load slowely if the referenced script is particuarly large. Leaflet, like most JavaScript libraries, is fairly small, so there is no noticable delay.
+Note that placing a script in the ```<head>``` does carry the risk of causing the page to load slowly if the referenced script is particuarly large. Leaflet, like most JavaScript libraries, is fairly small, so there is no noticable delay.
 
 Many JavaScript libraries consist of a single ```.js``` file, but Leaflet is slightly more complex and is built on a CSS file in addition to its JavaScript file. CSS files should always be referenced with a ```<link>``` element before the reference to the JavaScript file. Note that the CSS file can be hosted locally, just like the JavaScript file, but we will be using a remote script for this tutorial.
 
