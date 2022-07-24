@@ -109,7 +109,7 @@ With ```var``` our script creates a variable called "map" and assigns the JavaSc
 <body>
     <div id="map"></div>
     <script>
-        var map = L.map("map", {center: [39.9526, 75.1652], zoom: 15});
+        var map = L.map("map", {center: [39.9526, -75.1652], zoom: 15});
     </script>
 </body>
 ```
@@ -123,7 +123,7 @@ Nearly there! Now we need to set a tile layer, which will provide the background
     <div id="map"></div>
     <script>
         
-        var map = L.map("map", {center: [39.9526, 75.1652], zoom: 15});
+        var map = L.map("map", {center: [39.9526, -75.1652], zoom: 15});
         
         var openStreet = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
