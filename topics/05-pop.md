@@ -20,6 +20,8 @@ Here's how we might define a basic Popup for our Marker object at Philadelphia's
 
 Note that this entire expression could be written as a single line of code. Because humans are not machines, however, it is best to split this code into multiple lines, especially if you ever plan to modify your Popup content!
 
+Add this Popup to your map. Save your file and open it again in your browser. What do you notice? How do you interact with the Popup? Take a bit of time and define a few more Popups for points on your map. Remember that you can bind Popups to objects other than Markers!
+
 ---
 
 [<<< Previous](04-obj.md) | [Next >>>]()
