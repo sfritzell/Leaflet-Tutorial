@@ -16,8 +16,8 @@ This tutorial was originally created as instructional material for the 2022 Digi
 2. [Setting up the map](topics/02-prep.md)
 3. [Modifying the base map](topics/03-mods.md)
 4. [Adding objects](topics/04-obj.md)
-5. Working with popups
-6. Ensuring web-accessibility
+5. [Working with popups](topics/05-pop.md)
+6. [Ensuring web-accessibility](topics/06-access.md)
 
 ## Helpful links:
 
