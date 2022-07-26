@@ -15,7 +15,7 @@ This tutorial was originally created as instructional material for the 2022 Digi
 1. [About Leaflet](topics/01-leaflet.md)
 2. [Setting up the map](topics/02-prep.md)
 3. [Modifying the base map](topics/03-mods.md)
-4. Adding objects
+4. [Adding objects](topics/04-obj.md)
 5. Working with popups
 6. Ensuring web-accessibility
 
