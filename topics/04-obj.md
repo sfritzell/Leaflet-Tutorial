@@ -24,7 +24,7 @@ Save your file and then open it in your browser. Notice anything new?
 
 Note that while it is possible to simply create a marker object using the ```L.marker().addTo()``` method without defining a new variable, doing so limits the sort of advanced methods which you can apply to your map later on. And let's be honest, defining a marker as a new variable makes our code a bit more human-readable. 
 
-Use this same method to add at least two more markers to your map. Use [Find Latitude and Longitude](https://www.findlatitudeandlongitude.com/) as a resource for obtaining geographic coordinates - be sure to check the preview map on the website, since this will help you to discover any errors early on!
+Use this same method to add at least two more markers to your map. An easy trick for obtaining geographic coordinates: search for an address or place in GoogleMaps and right click on the icon. This will pull up a box with coordinates that you can copy and paste for your own use. 
 
 ## Other Leaflet objects
 
