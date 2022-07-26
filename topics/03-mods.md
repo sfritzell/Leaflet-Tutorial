@@ -29,7 +29,7 @@ Say that you want your map to display topographical information beyond what is s
 </body>
 ```
 
-As when we created our map variable, the operation ```L.tileLayer.wms()``` requires two arguments (and, if you look at the content that we copy-pasted for our basemap, you should notice that the L.tileLayer() operation uses similar syntax!). The first is a URL string that directs to the base WMS. The second consists of your ```wmsOptions```, of which one is required: ```layers```.  Let's add a WMS representing meteorological radar data for North America with the following:
+As when we created our map variable, the operation ```L.tileLayer.wms()``` requires two arguments (and, if you look at the content that we copy-pasted for our basemap, you should notice that the L.tileLayer() operation uses similar syntax!). The first is a URL string that directs to the base WMS. The second consists of your ```wmsOptions```, of which one is required: ```layers```.  Let's add a WMS representing meteorological radar data for the United States with the following:
 
 ```html
 <body>
