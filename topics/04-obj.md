@@ -26,6 +26,22 @@ Note that while it is possible to simply create a marker object using the ```L.m
 
 Use this same method to add at least two more markers to your map. Use [Find Latitude and Longitude](https://www.findlatitudeandlongitude.com/) as a resource for obtaining geographic coordinates - be sure to check the preview map on the website, since this will help you to discover any errors early on!
 
+## Other Leaflet objects
+
+Leaflet also allows for the creation of slightly more complex objects, such as lines and polygons, which are composed of several points. We won't go into too much detail here, but let's create a simple line to get a better idea of how such objects migth be created. 
+
+Lines in Leaflet are created using the ```L.polyline()``` function. Because a line is composed of *at least* two points, it is essential to specifiy the coordinates of the points which our line should pass through. We do this by passing the function an array of ```[lat, lng]``` coordinate arrays. The function will interpret the first set of coordinates as the starting point of the line, and the final set of coordinates as the ending point of the line.
+
+Adapt the following example to create a line between two of the Markers that you have already defined on your map.
+
+```html
+<script>
+  var line = L.polyline([[39.950879, -75.150133], [40.102052, -75.446917]]).addTo(map);
+</script>
+```
+
+To create a polygon, use the ```L.polygon()``` function and pass it an array of *at least* three ```[lat, lng]``` coordinate arryas. The function will create a line between the specified coordinates, progressing from first to last, and then an additional line connecting the first and last points.
+
 ---
 
 [<<< Previous](03-mods.md) | [Next >>>]()
