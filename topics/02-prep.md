@@ -152,4 +152,4 @@ Now save your file and try opening it in your browser. Notice any difference?
 
 ---
 
-[<<< Previous](01-leaflet.md) | [Next >>>](03-mods.md)
+[< Previous](01-leaflet.md) | [Next >](03-mods.md)
