@@ -44,4 +44,4 @@ To create a polygon, use the ```L.polygon()``` function and pass it an array of 
 
 ---
 
-[<<< Previous](03-mods.md) | [Next >>>](05-pop.md)
+[< Previous](03-mods.md) | [Next >](05-pop.md)
