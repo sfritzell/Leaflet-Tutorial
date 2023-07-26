@@ -23,4 +23,4 @@ While Leaflet is arguably one, if not the most popular of open-source web-mappin
 
 ---
 
-[Home](https://github.com/sfritzell/Leaflet-Tutorial) | [Next >](02-prep.md)
+[Home](/README.md) | [Next >](02-prep.md)
