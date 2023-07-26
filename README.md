@@ -28,4 +28,4 @@ This tutorial was originally created as instructional material for the 2022 Digi
 
 ---
 
-[Start tutorial >>>](topics/01-leaflet.md)
+[Start tutorial >](topics/01-leaflet.md)
