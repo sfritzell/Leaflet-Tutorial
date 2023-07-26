@@ -47,4 +47,4 @@ Save your file and open the map in your browser.  What do you notice?
 
 ---
 
-[<<< Previous](02-prep.md) | [Next >>>](04-obj.md)
+[< Previous](02-prep.md) | [Next >](04-obj.md)
