@@ -43,4 +43,4 @@ There are also a variety of tools designed for testing the accessibility of diff
 
 ---
 
-[< Previous](05-pop.md) | [Home >](https://github.com/sfritzell/Leaflet-Tutorial)
+[< Previous](05-pop.md) | [Finish Tutorial >](https://sfritzell.github.io/Leaflet-Tutorial/)
