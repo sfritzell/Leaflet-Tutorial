@@ -23,4 +23,4 @@ While Leaflet is arguably one, if not the most popular of open-source web-mappin
 
 ---
 
-[Home]({{ site.baseurl }}/README.md) | [Next >](02-prep.md)
+[Home](https://sfritzell.github.io/Leaflet-Tutorial/) | [Next >](02-prep.md)
