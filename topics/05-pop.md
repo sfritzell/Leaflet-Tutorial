@@ -14,11 +14,11 @@ Here's how we might define a basic Popup for our Marker object at Philadelphia's
 <!-- Head content is here -->
 <body>
 <!-- Other body content is here -->
-	<script>
-		var indePark = L.marker([39.950879, -75.150133])
-			.bindPopup('<h1>Independence National Historical Park</h1><p>This park is located in <b>Philadelphia</b> and encompases both <b>Independence Hall</b> and <b>the Liberty Bell</b>.</p>')
-			.addTo(map);
-	</script>
+  <script>
+    var indePark = L.marker([39.950879, -75.150133])
+      .bindPopup('<h1>Independence National Historical Park</h1><p>This park is located in <b>Philadelphia</b> and encompases both <b>Independence Hall</b> and <b>the Liberty Bell</b>.</p>')
+      .addTo(map);
+  </script>
 </body>
 ```
 
@@ -35,10 +35,10 @@ First we will create a new variable and define it with the function ```L.control
 ```html
 <!-- Head content is here -->
 <body>
-	<!-- Other body content is here -->
-	<script>
-		var descrip = L.control({position: 'bottomleft'});
-	</script>
+  <!-- Other body content is here -->
+  <script>
+    var descrip = L.control({position: 'bottomleft'});
+  </script>
 </body>
 ```
 
@@ -47,21 +47,21 @@ We want to fill our newly created control with a map description consisting of a
 ```html
 <!-- Head content is here -->
 <body>
-	<!-- Other body content is here -->
-	<script>
-		var descrip = L.control({position: 'bottomleft'});
-		descrip.onAdd = function() {
-			let div = L.DomUtil.create('div', 'descrip');
-			div.innerHTML =
-				'<h1>About this Map</h1><hr>' + 
-				'<p>This map displays parks near Philadelphia that</p>' +
-				'<p> are sustained by the National Park Service.</p>' +
-				'<h2>How to Use</h2>' +
-				'<p>Click on a marker to learn more about a park.</p>';
-			return div;
-		};
-		descrip.addTo(map);
-	</script>
+  <!-- Other body content is here -->
+  <script>
+    var descrip = L.control({position: 'bottomleft'});
+    descrip.onAdd = function() {
+      let div = L.DomUtil.create('div', 'descrip');
+      div.innerHTML =
+        '<h1>About this Map</h1><hr>' + 
+        '<p>This map displays parks near Philadelphia that</p>' +
+        '<p> are sustained by the National Park Service.</p>' +
+        '<h2>How to Use</h2>' +
+        '<p>Click on a marker to learn more about a park.</p>';
+      return div;
+    };
+    descrip.addTo(map);
+  </script>
 </body>
 ```
 
@@ -71,18 +71,18 @@ Finally, we need to add some CSS to provide our newly created description contro
 
 ```html
 <head>
-	<!-- Other head content is here -->
-	<style>
-		.descrip {
-      			width:  250 px;
-      			font-size: 16px;
-      			font-family: "Open Sans", Helvetica, sans-serif;
-      			padding: 10px 14px;
-      			background-color: #FFFFFF;
-      			border-radius: 5px;
-      			border: 5px solid #D3D3D3;
-      		}
-	</style>
+  <!-- Other head content is here -->
+  <style>
+    .descrip {
+      width:  250 px;
+      font-size: 16px;
+      font-family: "Open Sans", Helvetica, sans-serif;
+      padding: 10px 14px;
+      background-color: #FFFFFF;
+      border-radius: 5px;
+      border: 5px solid #D3D3D3;
+    }
+  </style>
 </head>
 <!-- Body content is here -->
 ```
