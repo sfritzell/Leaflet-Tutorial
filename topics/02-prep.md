@@ -29,11 +29,11 @@ When loading an external script file using the ```<script>``` element we use the
 
 ```html
 <head>
-  <title>Leaflet Web Map</title>
-  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" 
-          integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" 
-          crossorigin="">
-  </script>
+    <title>Leaflet Web Map</title>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin="">
+    </script>
 </head>
 ```
 
@@ -44,15 +44,13 @@ Many JavaScript libraries consist of a single ```.js``` file, but Leaflet is sli
 
 ```html
 <head>
-  <title>Leaflet Web Map</title>
-  <link rel="stylesheet" 
-        href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" 
-        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" 
-        />
-  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" 
-          integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" 
-          crossorigin="">
-  </script>
+    <title>Leaflet Web Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin="">
 </head>
 ```
 
