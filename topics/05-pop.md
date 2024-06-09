@@ -11,11 +11,15 @@ Popups are added to a Leaflet map using the method ```x.bindPopup()```, where x 
 Here's how we might define a basic Popup for our Marker object at Philadelphia's Independence National Historical Park:
 
 ```html
-<script>
-	var indePark = L.marker([39.950879, -75.150133])
-		.bindPopup('<h1>Independence National Historical Park</h1><p>This park is located in <b>Philadelphia</b> and encompases both <b>Independence Hall</b> and <b>the Liberty Bell</b>.</p>')
-		.addTo(map);
-</script>
+<!-- Head content is here -->
+<body>
+<!-- Other body content is here -->
+	<script>
+		var indePark = L.marker([39.950879, -75.150133])
+			.bindPopup('<h1>Independence National Historical Park</h1><p>This park is located in <b>Philadelphia</b> and encompases both <b>Independence Hall</b> and <b>the Liberty Bell</b>.</p>')
+			.addTo(map);
+	</script>
+</body>
 ```
 
 Note that this entire expression could be written as a single line of code. Because humans are not machines, however, it is best to split this code into multiple lines, especially if you ever plan to modify your Popup content!
@@ -29,28 +33,36 @@ Say that you wanted to add some content describing the whole of your map, rather
 First we will create a new variable and define it with the function ```L.control()```, which will create a new Leaflet map control that we can then further specifiy using some HTML. We will also define the position of this new control on the screen.
 
 ```html
-<script>
-	var descrip = L.control({position: 'bottomleft'});
-</script>
+<!-- Head content is here -->
+<body>
+	<!-- Other body content is here -->
+	<script>
+		var descrip = L.control({position: 'bottomleft'});
+	</script>
+</body>
 ```
 
 We want to fill our newly created control with a map description consisting of a few lines of text. (As with Popups, you can use basic HTML to style your text or to add links and images). To define the contents and behavior of our control, we will use the ```x.onAdd``` method, where x indicates the control defined by our variable. (This method essentially tells the control how to behave when it is added to the map using the ```x.addTo()``` operation). We will define our ```x.onAdd``` method as a function that creates a ```<div>``` and fills it with HTML.
 
 ```html
-<script>
-	var descrip = L.control({position: 'bottomleft'});
-	descrip.onAdd = function() {
-		let div = L.DomUtil.create('div', 'descrip');
-		div.innerHTML =
-			'<h1>About this Map</h1><hr>' + 
-			'<p>This map displays parks near Philadelphia that</p>' +
-			'<p> are sustained by the National Park Service.</p>' +
-			'<h2>How to Use</h2>' +
-			'<p>Click on a marker to learn more about a park.</p>';
-		return div;
-	};
-	descrip.addTo(map);
-</script>
+<!-- Head content is here -->
+<body>
+	<!-- Other body content is here -->
+	<script>
+		var descrip = L.control({position: 'bottomleft'});
+		descrip.onAdd = function() {
+			let div = L.DomUtil.create('div', 'descrip');
+			div.innerHTML =
+				'<h1>About this Map</h1><hr>' + 
+				'<p>This map displays parks near Philadelphia that</p>' +
+				'<p> are sustained by the National Park Service.</p>' +
+				'<h2>How to Use</h2>' +
+				'<p>Click on a marker to learn more about a park.</p>';
+			return div;
+		};
+		descrip.addTo(map);
+	</script>
+</body>
 ```
 
 In short, with the ```.onAdd``` method, we create a function that tells the computer "when the new control is added to the map, create a ```<div>``` and fill it with this stuff". Note how the name that we have set for our control gets used in this process to specificy precisely what the subject of this action should be. 
@@ -58,17 +70,21 @@ In short, with the ```.onAdd``` method, we create a function that tells the comp
 Finally, we need to add some CSS to provide our newly created description control with some basic styling. Here is one possibility:
 
 ```html
-<style>
-	.descrip {
-      		width:  250 px;
-      		font-size: 16px;
-      		font-family: "Open Sans", Helvetica, sans-serif;
-      		padding: 10px 14px;
-      		background-color: #FFFFFF;
-      		border-radius: 5px;
-      		border: 5px solid #D3D3D3;
-      	}
-</style>
+<head>
+	<!-- Other head content is here -->
+	<style>
+		.descrip {
+      			width:  250 px;
+      			font-size: 16px;
+      			font-family: "Open Sans", Helvetica, sans-serif;
+      			padding: 10px 14px;
+      			background-color: #FFFFFF;
+      			border-radius: 5px;
+      			border: 5px solid #D3D3D3;
+      		}
+	</style>
+</head>
+<!-- Body content is here -->
 ```
 
 (Note that because the ```L.control``` method is used for creating *custom* controls without defaults, we must define some styling or the control won't appear on our map)
