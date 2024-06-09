@@ -22,7 +22,9 @@ Here are a few additional map options that you might find useful. Spend a bit of
 Say that you want your map to display topographical information beyond what is shown in your basic geographical background. One way to do this is to use a WMS, or Web Map Service, which is a popular way of publishing maps by professional GIS software. In format, WMS is similar to map tiles, but it is defined a little differently under-the-hood, so we need to add WMS layers using a slightly different syntax in Leaflet. 
 
 ```html
+<!-- Head content is here -->
 <body>
+  <!-- Other body content is here -->
   <script>
     var wmsLayer = L.tileLayer.wms().addTo(map);
   </script>
@@ -32,7 +34,9 @@ Say that you want your map to display topographical information beyond what is s
 As when we created our map variable, the operation ```L.tileLayer.wms()``` requires two arguments (and, if you look at the content that we copy-pasted for our basemap, you should notice that the L.tileLayer() operation uses similar syntax!). The first is a URL string that directs to the base WMS. The second consists of your ```wmsOptions```, of which one is required: ```layers```.  Let's add a WMS representing meteorological radar data for the United States with the following:
 
 ```html
+<!-- Head content is here -->
 <body>
+  <!-- Other body content is here -->
   <script>
     var wmsLayer = L.tileLayer.wms('https://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0q.cgi?', {
       layers: 'nexrad-n0q-900913',
