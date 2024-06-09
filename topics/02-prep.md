@@ -35,6 +35,7 @@ When loading an external script file using the ```<script>``` element we use the
         crossorigin="">
     </script>
 </head>
+<!-- Body content is here -->
 ```
 
 Note that placing a script in the ```<head>``` does carry the risk of causing the page to load slowly if the referenced script is particuarly large. Leaflet, like most JavaScript libraries, is fairly small, so there is no noticable delay.
@@ -53,6 +54,7 @@ Many JavaScript libraries consist of a single ```.js``` file, but Leaflet is sli
         crossorigin="">
     </script>
 </head>
+<!-- Body content is here -->
 ```
 
 In addition to its CSS and JavaScript files, the Leaflet library also consists of a handful of image files which are used to display elements on a map. Because we are already referencing remote CSS and JavaScript files in this tutorial, we don't need to do anything else to gain access to these image files - these images live in the same place as the files that we are already referencing. If you are working with a locally hosted version of Leaflet, however, you will need to create an ```images``` directory within the directory where the CSS file is also located.
@@ -62,6 +64,7 @@ In addition to its CSS and JavaScript files, the Leaflet library also consists o
 Now that we have created references to the Leaflet library, we can go ahead and create some space for the web map to exist within our basic HTML framework. We do this by adding a ```<div>``` element within the ```<body>``` of the HTML, which creates the space used to hold the interactive map. 
 
 ```html
+<!-- Head content is here -->
 <body>
     <div id="map"></div>
 </body>
@@ -73,7 +76,8 @@ We also need to define the basic visual structure of the map, which we will do b
 
 ```html
 <head>
-  <style>
+    <!-- Other head content is here -->
+    <style>
       body {
         padding: 0;
         margin: 0;
@@ -83,7 +87,7 @@ We also need to define the basic visual structure of the map, which we will do b
         height: 100%;
         width: 100%;
       }
-  </style>
+    </style>
 </head>
 ```
 
@@ -94,6 +98,7 @@ It is possible, and, in fact, preferred to create a seperate CSS file and then a
 With the ```<div>``` element for the map defined and styled, we can finally move on to adding the map itself using a bit of JavaScript. First we will need to add another ```<script>``` element to our HTML file, but this time at the bottom of the ```<body>```, rather than in the ```<head>``` as before. Whereas our ```<script>``` tag in the ```<head>``` is used to load the Leaflet library, the ```<script>``` tag in the body will contain the JavaScript (modified from the Leaflet library) which defines the behaviour of the interactive map. It is best practice to place scripts which define the behavior of an HTML object at the bottom of the ```<body>``` to improve web display speed.
 
 ```html
+<!-- Head content is here -->
 <body>
     <div id="map"></div>
     <script>
@@ -105,6 +110,7 @@ With the ```<div>``` element for the map defined and styled, we can finally move
 With ```var``` our script creates a variable called "map" and assigns the JavaScript object ```L.map()``` to it. ```L``` refers to a global object of the Leaflet library, which contains all of the library functions and methods. ```.map()``` refers to the Leaflet method which creates a map using two types of argument. The first argument is required, and supplies the ID of the ```<div>``` where the map is located in the HTML; in this case, ```"map"```. The second argument is optional and defines map options using name-value pairs to specify preferences for the initial appearance and interactivity of the map.  (Note that some of these options can also be defined using Leaflet methods). The following specifies that the initial load of our map should be centered on the city of Philadelphia with a zoom level of 15. 
 
 ```html
+<!-- Head content is here -->
 <body>
     <div id="map"></div>
     <script>
@@ -118,6 +124,7 @@ Note that the ```center``` option is defined using geographic coordinates (latit
 Nearly there! Now we need to set a tile layer, which will provide the background imagery for the map itself. Think about the different appearances of  maps that you might encounter in a textbook or road atlas, or the different options available in your favorite GPS app (defaults, satellite, terrain, etc.) - in web-mapping these are your tile layers. There are many, many [options for tile layers](https://leaflet-extras.github.io/leaflet-providers/preview/index.html) available and it is worth exploring which of these best support the needs of your mapping project. One popular provider is OpenStreetMap. Copy-paste the JavaScript for OpenStreetMaps from the options page under a new ```<script>``` variable called ```openStreet```.
 
 ```html
+<!-- Head content is here -->
 <body>
     <div id="map"></div>
     <script>
@@ -142,7 +149,9 @@ Finally, with the tile layer in place, let's add one additional element to the `
     <title>Leaflet Web Map</title>
     <meta name="viewport" content="width=device-width, 
         initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Other head content is here -->
 </head>
+<!-- Body content is here -->
 ```
 
 This bit of code is optional if you intend for your map to be viewed exclusively from a computer browser, but since Leaflet is a mobile-friendly library, we can use the ```<meta>``` element here to disable unwanted scaling of the page when viewed on mobile devices (which would cause many of the symbols and controls on the map to appear too small).
