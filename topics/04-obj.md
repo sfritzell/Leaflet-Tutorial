@@ -15,9 +15,13 @@ For our purposes, we will stick with the default Leaflet Marker.
 In order to add a marker to a Leaflet map, we use the ```L.marker()``` function. This function creates a marker obejct which we can then add to the map using the ```.addTo()``` method, with which we are already familiar. To create our first marker, let's add a new variable object as ```script``` in the  ```body``` of our html document. A marker can't exist without a defined point, so let's pass the coordinates of the Independence National Historical Park to our function using the ```[lat, lng]``` format which we used earlier when initializing our map. 
 
 ```html
-<script>
-  var indePark = L.marker([39.950879, -75.150133]).addTo(map);
-</script>
+<!-- Head content is here -->
+<body>
+  <!-- Other body content is here -->
+  <script>
+    var indePark = L.marker([39.950879, -75.150133]).addTo(map);
+  </script>
+</body>
 ```
 
 Save your file and then open it in your browser. Notice anything new?
@@ -35,9 +39,13 @@ Lines in Leaflet are created using the ```L.polyline()``` function. Because a li
 Adapt the following example to create a line between two of the Markers that you have already defined on your map.
 
 ```html
-<script>
-  var line = L.polyline([[39.950879, -75.150133], [40.102052, -75.446917]]).addTo(map);
-</script>
+<!-- Head content is here -->
+<body>
+  <!-- Other body content is here -->
+  <script>
+    var line = L.polyline([[39.950879, -75.150133], [40.102052, -75.446917]]).addTo(map);
+  </script>
+</body>
 ```
 
 To create a polygon, use the ```L.polygon()``` function and pass it an array of *at least* three ```[lat, lng]``` coordinate arryas. The function will create a line between the specified coordinates, progressing from first to last, and then an additional line connecting the first and last points.
