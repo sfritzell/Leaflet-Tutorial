@@ -10,11 +10,11 @@ Using a text-editor of your choice (VSCode, Sublime, Atom, etc.), create an empt
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Leaflet Web Map</title>
-    <!-- More content will go here -->
+  <title>Leaflet Web Map</title>
+  <!-- More content will go here -->
 </head>
 <body>
-    <!-- More content will go here -->
+  <!-- More content will go here -->
 </body>
 </html>
 ```
@@ -29,11 +29,11 @@ When loading an external script file using the ```<script>``` element we use the
 
 ```html
 <head>
-    <title>Leaflet Web Map</title>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin="">
-    </script>
+  <title>Leaflet Web Map</title>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="">
+  </script>
 </head>
 <!-- Body content is here -->
 ```
@@ -45,14 +45,14 @@ Many JavaScript libraries consist of a single ```.js``` file, but Leaflet is sli
 
 ```html
 <head>
-    <title>Leaflet Web Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin="">
-    </script>
+  <title>Leaflet Web Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="">
+  </script>
 </head>
 <!-- Body content is here -->
 ```
@@ -66,7 +66,7 @@ Now that we have created references to the Leaflet library, we can go ahead and 
 ```html
 <!-- Head content is here -->
 <body>
-    <div id="map"></div>
+  <div id="map"></div>
 </body>
 ```
 
@@ -76,18 +76,18 @@ We also need to define the basic visual structure of the map, which we will do b
 
 ```html
 <head>
-    <!-- Other head content is here -->
-    <style>
-      body {
-        padding: 0;
-        margin: 0;
-      }
+  <!-- Other head content is here -->
+  <style>
+    body {
+    padding: 0;
+    margin: 0;
+    }
       
-      html, body, #map {
-        height: 100%;
-        width: 100%;
-      }
-    </style>
+    html, body, #map {
+    height: 100%;
+    width: 100%;
+    }
+  </style>
 </head>
 ```
 
@@ -100,10 +100,10 @@ With the ```<div>``` element for the map defined and styled, we can finally move
 ```html
 <!-- Head content is here -->
 <body>
-    <div id="map"></div>
-    <script>
-        var map = L.map("map");
-    </script>
+  <div id="map"></div>
+  <script>
+    var map = L.map("map");
+  </script>
 </body>
 ```
 
@@ -112,10 +112,10 @@ With ```var``` our script creates a variable called "map" and assigns the JavaSc
 ```html
 <!-- Head content is here -->
 <body>
-    <div id="map"></div>
-    <script>
-        var map = L.map("map", {center: [39.9526, -75.1652], zoom: 15});
-    </script>
+  <div id="map"></div>
+  <script>
+    var map = L.map("map", {center: [39.9526, -75.1652], zoom: 15});
+  </script>
 </body>
 ```
 
@@ -126,17 +126,17 @@ Nearly there! Now we need to set a tile layer, which will provide the background
 ```html
 <!-- Head content is here -->
 <body>
-    <div id="map"></div>
-    <script>
+  <div id="map"></div>
+  <script>
         
-        var map = L.map("map", {center: [39.9526, -75.1652], zoom: 15});
+    var map = L.map("map", {center: [39.9526, -75.1652], zoom: 15});
         
-        var openStreet = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+    var openStreet = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
         
-    </script>
+  </script>
 </body>
 ```
 
@@ -146,10 +146,10 @@ Finally, with the tile layer in place, let's add one additional element to the `
 
 ```html
 <head>
-    <title>Leaflet Web Map</title>
-    <meta name="viewport" content="width=device-width, 
-        initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Other head content is here -->
+  <title>Leaflet Web Map</title>
+  <meta name="viewport" content="width=device-width, 
+      initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- Other head content is here -->
 </head>
 <!-- Body content is here -->
 ```
