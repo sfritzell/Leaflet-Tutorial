@@ -23,7 +23,7 @@ This tutorial was originally created as instructional material for the 2022 Digi
 
 - [Leaflet designed tutorials](https://leafletjs.com/examples.html)
 - [Leaflet documentation](https://leafletjs.com/reference.html)
-- [Introduction to Web Mapping](http://132.72.155.230:3838/js/index.html) by Michael Dorman
+- [Introduction to Web Mapping](https://geobgu.xyz/web-mapping2/) by Michael Dorman
   - An excellent introduction to web-mapping tools and methods, including Leaflet, with robust bibliography
 
 ---
