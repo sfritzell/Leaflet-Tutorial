@@ -15,10 +15,13 @@ As we explored some of the basic map options availabe in Leaflet, you may have n
 One of the options that you can pass to markers on your map is an alternate description or title. By passing an alternative title, we can ensure that our markers are also discernable to screen readers. Here is an example of how this is done:
 
 ```html
-<script>
-  var indePark = L.marker([39.950879, -75.150133], {alt: 'Independce National Historical Park'})
-			.bindPopup('<h1>Independence National Historical Park</h1><p>This park is located in <b>Philadelphia</b> and encompases both <b>Independence Hall</b> and <b>the Liberty Bell</b>.</p>')
-			.addTo(map);
+<!-- Head content is here -->
+<body>
+<!-- Other body content is here -->
+  <script>
+    var indePark = L.marker([39.950879, -75.150133], {alt: 'Independce National Historical Park'})
+      .bindPopup('<h1>Independence National Historical Park</h1><p>This park is located in <b>Philadelphia</b> and encompases both <b>Independence Hall</b> and <b>the Liberty Bell</b>.</p>')
+      .addTo(map);
 </script>
 ```
 
@@ -29,9 +32,11 @@ Take a moment to add an alternative title to each of your markers.
 If your map is purely decorative, like background images or videos, and not intended for user interaction, make sure that you hide these maps from assistive technologies.  This will avoid potential confusion for screen reader users and eliminate unnecessary tab stops for keyboard users. One way to achieve this is by using the HTML innert attribute polyfill in the ```<div>``` tag for your map.
 
 ```html
+<!-- Head content is here -->
 <body>
   <div id='decorative-map' inert></div>
   <script> ... </script>
+  <!-- Other body content is here -->
 </body>
 ```
 
