@@ -1,6 +1,6 @@
 # About Leaflet
 
-[Leaflet](https://leafletjs.com/) is an open-source JavaScript library initially released in 2011 that is used for creating interactive web maps. You can think of it as a collection of pre-written JavaScript which takes on the most challenging work of mapping behind the scenes. Using only two or three simple JavaScript expressions, you can create a simple map in Leaflet, or you can build something much more complex with hundreds of lines of code. The choice is yours and the tools are there!
+[Leaflet](https://leafletjs.com/) is an open-source JavaScript library initially released in 2011 that is used for creating interactive web maps. You can think of it as a collection of pre-written JavaScript which takes on the most challenging work of mapping behind the scenes. Using only two or three basic JavaScript expressions, you can create a simple map in Leaflet, or you can build something much more complex with hundreds of lines of code. The choice is yours and the tools are there!
 
 ## What is web-mapping?
 
@@ -13,7 +13,7 @@ Like the spatial information presented in GIS software, web maps are typically c
 
 ## Leaflet and other web-mapping tools:
 
-While Leaflet is arguably one, if not the most popular of open-source web-mapping tools currently available, there are a number of alternative JavaScript libraries available, each with their own advantages and disadvantages (which may change depending on the exact needs of your project!). Here are a few more popular options that are good to be aware of:
+While Leaflet is arguably one of the most popular open-source web-mapping tools currently available, a number of other JavaScript libraries exist, each with their own advantages and disadvantages (which may change depending on the exact needs of your project!). Here are a few more popular options that are good to be aware of:
 
 - [Google Maps](https://developers.google.com/maps/) (commercial)
 - [OpenLayers](https://openlayers.org/) (open-source)
